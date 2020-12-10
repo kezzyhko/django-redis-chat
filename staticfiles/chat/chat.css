@@ -1,0 +1,18 @@
+.connected {
+	color: goldenrod;
+}
+.error {
+	color: red;
+}
+.username {
+	font-weight: bold;
+}
+
+#chat {
+    list-style: none;
+    padding: 0;
+    word-break: break-word;
+    width: 20vw;
+    text-align: left;
+    margin: auto;
+}
