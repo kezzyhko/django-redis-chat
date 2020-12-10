@@ -12,12 +12,12 @@
 		<main>
 			<div class="content">
 				{% block content %}{% endblock %}
+				{% if not no_main_page_link %}
+					<div class="return-link">
+						<a href="/">Back to main page</a>
+					</div>
+				{% endif %}
 			</div>
 		</main>
-		{% if not hide_footer %}
-			<footer>
-				<a href="/">Back to main page</a>
-			</footer>
-		{% endif %}
 	</body>
 </html>

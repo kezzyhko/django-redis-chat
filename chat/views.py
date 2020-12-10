@@ -8,7 +8,7 @@ from chat.views2 import HostsLoginView, HostsRegistrationView
 
 
 def index(request):
-	return render(request, 'index.html')
+	return render(request, 'index.html', {'no_main_page_link': True})
 
 
 class RegistrationView(HostsRegistrationView):
