@@ -6,7 +6,7 @@
 
 {% block inside_head %}
 
-	<link rel="stylesheet" type="text/css" href="{% static 'chat/chat.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'chat.css' %}">
 
 {% endblock %}
 
@@ -25,6 +25,6 @@
 	{% endif %}
 
 	<ul id="chat"></ul>
-	<script type="text/javascript" src='{% static "chat/chat.js" %}'></script>
+	<script type="text/javascript" src='{% static "chatwebsocket.js" %}'></script>
 
 {% endblock %}
