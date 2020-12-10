@@ -1,0 +1,26 @@
+version: '3.8'
+services:
+
+  redis:
+    image: redis
+    command: ["redis-server", "--appendonly", "yes"]
+    expose:
+      - "6379"
+
+  postgres:
+    image: postgres
+    expose:
+      - "5432"
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+
+  web:
+    build: .
+    command: bash -c "python3 manage.py makemigrations && python3 manage.py migrate --run-syncdb && python3 -u manage.py runserver 0.0.0.0:8000 --noreload"
+    ports:
+      - "8080:8000"
+    depends_on:
+      - postgres
+      - redis
