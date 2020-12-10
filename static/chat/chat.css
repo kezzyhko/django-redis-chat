@@ -9,10 +9,10 @@
 }
 
 #chat {
-    list-style: none;
-    padding: 0;
-    word-break: break-word;
-    width: 20vw;
-    text-align: left;
-    margin: auto;
+	list-style: none;
+	padding: 0;
+	word-break: break-word;
+	width: 20vw;
+	text-align: left;
+	margin: auto;
 }

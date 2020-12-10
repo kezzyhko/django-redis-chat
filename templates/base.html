@@ -8,16 +8,16 @@
 		{% block inside_head %}{% endblock %}
 	</head>
 	<body>
-        {% block top_panel %}{% endblock %}
+		{% block top_panel %}{% endblock %}
 		<main>
-            <div class="content">
-			    {% block content %}{% endblock %}
-		    </div>
-        </main>
-        {% if not hide_footer %}
-            <footer>
-                <a href="/">Back to main page</a>
-            </footer>
-        {% endif %}
+			<div class="content">
+				{% block content %}{% endblock %}
+			</div>
+		</main>
+		{% if not hide_footer %}
+			<footer>
+				<a href="/">Back to main page</a>
+			</footer>
+		{% endif %}
 	</body>
 </html>

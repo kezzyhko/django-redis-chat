@@ -5,11 +5,11 @@ from channels.routing import ProtocolTypeRouter, URLRouter
 from . import consumers
 
 websocket_urlpatterns = [
-    url('chat/', consumers.ChatConsumer),
+	url('chat/', consumers.ChatConsumer),
 ]
 
 application = ProtocolTypeRouter({
-    'websocket': AuthMiddlewareStack(
-        URLRouter(websocket_urlpatterns)
-    ),
+	'websocket': AuthMiddlewareStack(
+		URLRouter(websocket_urlpatterns)
+	),
 })
