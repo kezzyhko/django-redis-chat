@@ -84,7 +84,7 @@ CHANNEL_LAYERS = {
 	'default': {
 		'BACKEND': 'channels_redis.core.RedisChannelLayer',
 		'CONFIG': {
-			"hosts": [('redis', 6379)],
+			"hosts": [(os.environ.get('REDIS', 'redis'), 6379)],
 		},
 	},
 }
@@ -99,7 +99,7 @@ DATABASES = {
         'NAME': 'postgres',
         'USER': 'postgres',
         'PASSWORD': 'postgres',
-        'HOST': 'postgres',
+        'HOST': os.environ.get('POSTGRES', 'postgres'),
         'PORT': 5432,
 	},
 }
