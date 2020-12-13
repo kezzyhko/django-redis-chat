@@ -3,12 +3,13 @@ from django.urls import reverse
 from django.shortcuts import render, redirect
 from django.contrib.auth import get_user_model
 import re
+import os
 
 from chat.views2 import HostsLoginView, HostsRegistrationView
 
 
 def index(request):
-	return render(request, 'index.html', {'no_main_page_link': True})
+	return render(request, 'index.html', {'no_main_page_link': True, 'debug_output': os.environ.get('NODE_ID', '')})
 
 
 class RegistrationView(HostsRegistrationView):
