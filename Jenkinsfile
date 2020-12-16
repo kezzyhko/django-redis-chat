@@ -1,9 +1,9 @@
 pipeline {
     agent any
     stages {
-        stage("test") {
+        stage("buikd") {
             steps {
-                echo "test stage"
+                sh 'docker build https://github.com/kezzyhko/django-redis-chat.git#main --tag django-redis-chat'
             }
         }
     }
