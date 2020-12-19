@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage("build") {
             steps {
-                node {
+                script {
                 
                     def app_image = docker.build("redis-chat:${env.BUILD_ID}")
                 
