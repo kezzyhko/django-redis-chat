@@ -2,8 +2,10 @@ pipeline {
     agent any
     stages {
         stage("build") {
-            steps {
-                @docker build --tag django-redis-chat
+            node {
+                
+                def app_image = docker.build("redis-chat:${env.BUILD_ID}")
+                
             }
         }
     }
