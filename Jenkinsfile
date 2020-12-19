@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage("build") {
             steps {
-                docker build --tag django-redis-chat
+                @docker build --tag django-redis-chat
             }
         }
     }
