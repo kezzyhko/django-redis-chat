@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage("buikd") {
+        stage("build") {
             steps {
                 docker build --tag django-redis-chat
             }
