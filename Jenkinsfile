@@ -34,7 +34,7 @@ pipeline {
                     def web2 = '10.0.0.10'
                     sshagent(credentials: ['ssh_web']) {
                         sh 'ssh -o StrictHostKeyChecking=no ubuntu@10.0.0.9 uptime'
-                        sh 'ssh ubuntu@10.0.0.9 touch abcd'
+                        
                     }
                     
                     
