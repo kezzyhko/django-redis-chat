@@ -33,7 +33,7 @@ pipeline {
                     
                     
                     
-                    sh 'deployed'
+                    echo 'deployed'
                 }
             }
         }
