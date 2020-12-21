@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    environment {
+        SSH = credentials(ssh_key)
+    }
     stages {
         stage("build") {
             steps {
@@ -29,7 +32,12 @@ pipeline {
                 script {
                     def web1 = '10.0.0.9'
                     def web2 = '10.0.0.10'
-                    sh'ssh ubuntu@10.0.0.9 touch /home/ubuntu/abcd'
+                    echo '$SSH_USR'
+                    echo '$SSH_PSW'
+                    echo '$SSH_KEY'
+                    echo '$SSH'
+                    
+                    
                 }
             }
         }
