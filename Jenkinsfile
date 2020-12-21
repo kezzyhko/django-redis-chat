@@ -32,10 +32,10 @@ pipeline {
                 script {
                     def web1 = '10.0.0.9'
                     def web2 = '10.0.0.10'
-                    echo '$SSH_USR'
-                    echo '$SSH_PSW'
-                    echo '$SSH_KEY'
-                    echo '$SSH'
+                    echo "${env.SSH_USR}"
+                    echo "${env.SSH_PSW}"
+                    echo "${env.SSH_KEY}"
+                    echo "${env.SSH}"
                     
                     
                 }
