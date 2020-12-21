@@ -13,7 +13,7 @@ pipeline {
         stage("test") {
             steps{
                 script {
-                    app_image.withRun(){
+                    docker.image("redis-chat:${env.BUILD_ID}").withRun(){
                         c ->
                         sh 'python3 manage.py test'
                     }
