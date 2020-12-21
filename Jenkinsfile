@@ -10,5 +10,15 @@ pipeline {
                 }
             }
         }
+        stage("test") {
+            steps{
+                script {
+                    app_image.withRun(){
+                        c ->
+                        sh 'python3 manage.py test'
+                    }
+                }
+            }
+        }
     }
 }
