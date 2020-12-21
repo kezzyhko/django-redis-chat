@@ -29,7 +29,7 @@ pipeline {
                 script {
                     def web1 = '10.0.0.9'
                     def web2 = '10.0.0.10'
-                    sh'ssh ubuntu@${web1} touch /home/ubuntu/abcd'
+                    sh'ssh ubuntu@10.0.0.9 touch /home/ubuntu/abcd'
                 }
             }
         }
