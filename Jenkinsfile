@@ -32,10 +32,9 @@ pipeline {
                 script {
                     def web1 = '10.0.0.9'
                     def web2 = '10.0.0.10'
-                    echo "${env.SSH_USR}"
-                    echo "${env.SSH_PSW}"
-                    echo "${env.SSH_KEY}"
-                    echo "${env.SSH}"
+                    sshagent(credentials: ['ssh_web']) {
+                        sh'ssh ubuntu@10.0.0.9 touch /home/ubuntu/abcd'   
+                    }
                     
                     
                 }
