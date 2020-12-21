@@ -11,7 +11,7 @@ pipeline {
             }
         }
         stage("test") {
-            steps{
+            steps {
                 script {
                     def database_addr = '10.0.0.129'
                     def node_id = '1'
@@ -19,6 +19,17 @@ pipeline {
                         sh'python3 manage.py test'   
                     }
                    
+                }
+            }
+        }
+        
+        stage("deploy") {
+            steps {
+                input(message:"Deploy?", ok:"Yes")
+                script {
+                    def web1 = '10.0.0.9'
+                    def web2 = '10.0.0.10'
+                    sh'ssh ubuntu@${web1} touch /home/ubuntu/abcd'
                 }
             }
         }
