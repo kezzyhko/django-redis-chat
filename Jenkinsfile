@@ -1,8 +1,5 @@
 pipeline {
     agent any
-    environment {
-        SSH = credentials('ssh_key')
-    }
     stages {
         stage("build") {
             steps {
