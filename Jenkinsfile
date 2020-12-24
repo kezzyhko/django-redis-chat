@@ -13,6 +13,7 @@ pipeline {
                 }
             }
         }
+        
         stage("test") {
             steps {
                 script {
@@ -25,7 +26,7 @@ pipeline {
                 }
             }
         }
-        
+       
         stage("deploy") {
             steps {
                 input(message:"Deploy?", ok:"Yes")
