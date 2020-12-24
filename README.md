@@ -7,7 +7,8 @@ It was initially a part of another project - [Vulnbox with OWASP Top 10 2017 vul
 
 ## Example of usage
 
-Here is and [example of docker-compose config](docker-compose.yaml).
+Here is the [Terraform infrastructure that we used](https://github.com/BulbaWarrior/redis-chat-infrastructure)<br>
+Here is [an example of docker-compose config](docker-compose.yaml).
 
 Basically, this project needs:
 * a web app running on 8000 port
