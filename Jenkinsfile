@@ -25,14 +25,12 @@ pipeline {
         }
        
         stage("deploy") {
+            environment {
+	        SSH_CRED = credentials('aws-key')
+	    }
             steps {
                 input(message:"Deploy?", ok:"Yes")
-                script {
-                    
-                    
-                    
-                    echo 'deployed'
-                }
+                sh'ssh -i SSH_CRED $SSH_CRED_USR@18.219.119.51 touch abcd'
             }
         }
     }
