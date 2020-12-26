@@ -2,9 +2,9 @@
 OPT="-i ${SSH_CRED} -o StrictHostKeyChecking=no"
 SITE="${SSH_CRED_USR}@18.219.119.51"
 
-sudo docker save -o ./image.tar redis-chat:$BUILD_ID
+docker save -o ./image.tar redis-chat:$BUILD_ID
 scp $OPT ./image.tar $SITE:/tmp/image.tar
-sudo rm ./image.tar
+rm ./image.tar
 ssh $OPT $SITE sudo docker load -i /tmp/image.tar
 ssh $OPT $SITE sudo docker stop django-redis-chat
 ssh $OPT $SITE sudo docker rm django-redis-chat
