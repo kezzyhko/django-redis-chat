@@ -27,6 +27,8 @@ pipeline {
         stage("deploy") {
             environment {
 	        SSH_CRED = credentials('aws-key')
+		DATABASE_ADDR = '10.0.0.1'
+		NODE_ID = 1
 	    }
             steps {
                 input(message:"Deploy?", ok:"Yes")
