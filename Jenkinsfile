@@ -32,7 +32,8 @@ pipeline {
 	    }
             steps {
                 input(message:"Deploy?", ok:"Yes")
-		sh'./deploy.sh'
+		sh "chmod +x -R ${env.WORKSPACE}"
+		sh './deploy.sh'
             }
         }
     }
