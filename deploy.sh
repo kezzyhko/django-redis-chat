@@ -1,4 +1,3 @@
-#!/bin/bash
 
 OPT="-i ${SSH_CRED} -o StrictHostKeyChecking=no"
 SITE="${SSH_CRED_USR}@18.219.119.51"

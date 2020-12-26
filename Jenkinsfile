@@ -32,7 +32,7 @@ pipeline {
 	    }
             steps {
                 input(message:"Deploy?", ok:"Yes")
-		sh'./deploy.sh'
+		sh'sudo ./deploy.sh'
             }
         }
     }
