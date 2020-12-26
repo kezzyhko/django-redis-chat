@@ -30,7 +30,7 @@ pipeline {
 	    }
             steps {
                 input(message:"Deploy?", ok:"Yes")
-                sh'ssh -i $SSH_CRED -o StrictHostKeyChecking=no $SSH_CRED_USR@18.219.119.51 touch abcd'
+		sh'./deploy.sh'
             }
         }
     }
