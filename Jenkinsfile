@@ -34,12 +34,7 @@ pipeline {
             steps {
                 input(message:"Deploy?", ok:"Yes")
 				sh "chmod +x -R ${env.WORKSPACE}"
-				sh """
-				   for ip in $SERVER_IPS
-		    	   do
-		               SERVER_IP=$ip ./deploy.sh
-		    	   done
-				   """
+				sh './deploy.sh'
             }
         }
     }
