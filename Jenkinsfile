@@ -29,11 +29,15 @@ pipeline {
 	        SSH_CRED = credentials('aws-key')
 		DATABASE_ADDR = '10.0.0.1'
 		NODE_ID = 1
+		SERVER_IPS = ("18.217.216.221")
 	    }
             steps {
                 input(message:"Deploy?", ok:"Yes")
 		sh "chmod +x -R ${env.WORKSPACE}"
-		sh './deploy.sh'
+		sh 'for ip in ${SERVER_IPS[*]}
+		    do
+		        SERVER_IP=ip ./deploy.sh
+		    done'
             }
         }
     }
