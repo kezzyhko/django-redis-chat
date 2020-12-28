@@ -29,7 +29,7 @@ pipeline {
 	        	SSH_CRED = credentials('aws-key')
 				DATABASE_ADDR = '10.0.0.1'
 				NODE_ID = 1
-				SERVER_IPS = "18.217.216.221 10.0.0.9"
+				SERVER_IPS = "10.0.0.9 10.0.0.10 10.0.0.11"
 	    	}
             steps {
                 input(message:"Deploy?", ok:"Yes")
