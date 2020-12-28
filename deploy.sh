@@ -1,4 +1,4 @@
-for SERVER_IP in $SEVER_IPS
+for SERVER_IP in $SERVER_IPS
 do
 
     OPT="-i ${SSH_CRED} -o StrictHostKeyChecking=no"
