@@ -7,7 +7,7 @@ do
     docker save -o /tmp/image.tar redis-chat:$BUILD_ID
     scp $OPT /tmp/image.tar $SITE:/tmp/image.tar
     rm /tmp/image.tar
-    cat web_remote.sh | ssh $OPT $SITE
+    envsubst < web_remote.sh | ssh $OPT $SITE
     
 done
 echo deployed
