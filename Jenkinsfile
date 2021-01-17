@@ -30,6 +30,7 @@ pipeline {
 				DATABASE_ADDR = '10.0.0.1'
 				NODE_ID = 1
 				SERVER_IPS = "10.0.0.9 10.0.0.10 10.0.0.11"
+				BRANCH_NAME = "${GIT_BRANCH.split("/")[1]}"
 	    	}
             steps {
                 input(message:"Deploy?", ok:"Yes")
