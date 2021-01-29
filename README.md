@@ -16,3 +16,9 @@ Basically, this project needs:
 * PostgreSQL database running on 5432
 
 Ports, of course, can be changed through the config files
+
+
+
+## Scheme of the application
+
+![scheme](scheme.png)
